@@ -1,0 +1,41 @@
+_none
+edit
+play_arrow
+
+brightness_4
+// C++ Program to check if  
+// a number can be obtained  
+// by repetitive addition  
+// or subtraction of two numbers  
+  
+#include <bits/stdc++.h>  
+using namespace std;  
+  
+// Function to check and return if  
+// it is possible to obtain N by  
+// repetitive addition or subtraction  
+// of A and B  
+bool isPossible(int N, int a, int b)  
+{  
+    // Calculate GCD of A and B  
+    int g = __gcd(a, b);  
+  
+    // Condition to check  
+    // if N can be obtained  
+    if (N % g == 0)  
+        return true;  
+    else
+        return false;  
+}  
+  
+// Driver Code  
+int main()  
+{  
+    int N = 11, a = 2;  
+    int b = 5;  
+  
+    if (isPossible(N, a, b))  
+        cout << "YES";  
+    else
+        cout << "NO";  
+}  
